@@ -18,6 +18,7 @@ pipeline {
                     }
                     steps {
                         echo "On Branch A"
+                        sleep 60
                     }
                 }
                 stage('Branch B') {
@@ -26,6 +27,7 @@ pipeline {
                     }
                     steps {
                         echo "On Branch B"
+                        sleep 60
                     }
                 }
                 stage('Branch C') {
@@ -41,6 +43,7 @@ pipeline {
                         stage('Nested 2') {
                             steps {
                                 echo "In stage Nested 2 within Branch C"
+                                sleep 60
                             }
                         }
                     }
