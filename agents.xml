@@ -9,6 +9,7 @@ data:
     <org.csanchez.jenkins.plugins.kubernetes.PodTemplate>
       <inheritFrom>maven</inheritFrom>
       <name>for-branch-x</name>
+      <instanceCap>2147483647</instanceCap>
       <label>for-branch-a for-branch-b for-branch-c</label>
       <containers/>
       <envVars/>
