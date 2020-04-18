@@ -1,0 +1,18 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: jenkins-agent
+  labels:
+    role: jenkins-slave
+data:
+  for-branch-x: |-
+    <org.csanchez.jenkins.plugins.kubernetes.PodTemplate>
+      <inheritFrom>maven</inheritFrom>
+      <name>for-branch-x</name>
+      <label>for-branch-a for-branch-b for-branch-c</label>
+      <containers/>
+      <envVars/>
+      <annotations/>
+      <imagePullSecrets/>
+      <nodeProperties/>
+    </org.csanchez.jenkins.plugins.kubernetes.PodTemplate>
