@@ -1,7 +1,10 @@
 pipeline {
-    agent any
+    agent none
     stages {
         stage('Non-Parallel Stage') {
+            agent {
+                label "maven"
+            }
             steps {
                 echo 'This stage will be executed first.'
             }
