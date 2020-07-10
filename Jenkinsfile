@@ -14,33 +14,37 @@ pipeline {
             parallel {
                 stage('Branch A') {
                     agent {
-                        label "for-branch-a"
+                        label "maven-skopeo-agent"
                     }
                     steps {
                         echo "On Branch A"
+                        sleep 30
                     }
                 }
                 stage('Branch B') {
                     agent {
-                        label "for-branch-b"
+                        label "maven-skopeo-agent"
                     }
                     steps {
                         echo "On Branch B"
+                        sleep 30
                     }
                 }
                 stage('Branch C') {
                     agent {
-                        label "for-branch-c"
+                        label "maven-skopeo-agent"
                     }
                     stages {
                         stage('Nested 1') {
                             steps {
                                 echo "In stage Nested 1 within Branch C"
+                                sleep 30
                             }
                         }
                         stage('Nested 2') {
                             steps {
                                 echo "In stage Nested 2 within Branch C"
+                                sleep 30
                             }
                         }
                     }
